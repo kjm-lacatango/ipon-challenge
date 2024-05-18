@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input, select, textarea {
+    @apply border rounded-md outline-none px-2 py-1 mb-4 w-full;
+
+    &:focus {
+        @apply shadow-green-500 shadow-sm;
+    }
+}
+
+.scroll::-webkit-scrollbar {
+    @apply bg-transparent;
+    width: .5rem;
+}
+.scroll::-webkit-scrollbar-thumb {
+    @apply bg-teal-500 rounded-full;
+
+    &:hover {
+        @apply bg-blue-950;
+    }
+}

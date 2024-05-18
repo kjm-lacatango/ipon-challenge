@@ -1,0 +1,71 @@
+.login {
+    @apply h-screen w-screen flex items-center justify-center;
+
+    .card {
+        @apply shadow-xl flex flex-col rounded-xl p-4 items-center border;
+        width: 22rem;
+
+        .user-lock {
+            @apply fill-teal-500;
+        }
+
+        .sign-in {
+            @apply text-2xl font-semibold;
+            margin: 0 auto 0;
+        }
+
+        .success {
+            @apply bg-green-100 border-green-500 border rounded-md py-2 px-4 mt-2 w-full text-center;
+        }
+
+        .error {
+            @apply bg-red-100 border-red-500 border rounded-md py-2 px-4 mt-2 w-full text-center;
+        }
+
+        .inputs {
+            @apply flex flex-col pt-4 items-start w-full relative;
+
+            .icon {
+                @apply absolute fill-gray-300 cursor-pointer;
+                bottom: 1.2rem;
+                right: .5rem;
+
+                &:hover {
+                    @apply fill-gray-500;
+                }
+            }
+        }
+
+        .text {
+            @apply text-gray-500 text-sm mt-2;
+
+            .sign-up {
+                @apply text-gray-600 font-semibold cursor-pointer;
+
+                &:hover {
+                    @apply text-teal-400;
+                }
+            }
+        }
+
+        .forgot-pass {
+            @apply text-sm text-gray-500 flex w-full items-start mb-4;
+
+            u {
+                @apply cursor-pointer ml-1;
+
+                &:hover {
+                    @apply text-teal-500;
+                }
+            }
+        }
+        
+        button {
+            @apply bg-teal-300 px-4 py-2 rounded-md mt-4;
+
+            &:hover:not(&:disabled) {
+                @apply bg-teal-500;
+            }
+        }
+    }
+}

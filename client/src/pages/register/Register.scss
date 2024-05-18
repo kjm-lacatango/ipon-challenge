@@ -1,0 +1,74 @@
+.register {
+    @apply h-screen w-screen flex justify-center items-center;
+
+    .card {
+        @apply rounded-xl shadow-xl p-4 flex flex-col items-center justify-center border;
+        width: 37rem;
+
+        .title {
+            @apply text-2xl font-semibold;
+            margin: 0 auto 0;
+        }
+
+        .success {
+            @apply bg-green-100 border-green-500 border rounded-md py-2 px-4 mt-2 w-full text-center;
+        }
+
+        .error {
+            @apply bg-red-100 border-red-500 border rounded-md py-2 px-4 mt-2 w-full text-center;
+        }
+
+
+        .mid {
+            @apply grid grid-cols-2 gap-8 mt-4;
+
+            .left-side, .right-side {
+                @apply flex flex-col;
+            }
+
+            .user-lock {
+                @apply fill-teal-500;
+                margin: 0 auto .2rem;
+            }
+
+            .pass {
+                @apply relative;
+
+                .icon {
+                    @apply absolute fill-gray-300 cursor-pointer;
+                    bottom: 1.2rem;
+                    right: .5rem;
+
+                    &:hover {
+                        @apply fill-gray-500;
+                    }
+                }
+            }
+
+            .info {
+                @apply grid grid-cols-2 gap-3;
+            }
+        }
+
+        .text {
+            @apply text-gray-500 text-sm mt-2;
+
+            .to-login {
+                @apply text-gray-600 font-semibold cursor-pointer ml-2;
+
+                &:hover {
+                    @apply text-teal-400;
+                }
+            }
+        }
+
+        button {
+            @apply bg-teal-500 text-white border-2 border-teal-500 px-4 py-2 rounded-lg mt-4;
+            cursor: pointer;
+
+            &:hover {
+                @apply bg-white text-teal-500;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.main {
+    @apply h-screen w-screen flex items-center justify-center;
+
+    .nav {
+        @apply absolute grid items-center gap-2 py-2 px-6 bg-green-50 w-full;
+        grid-template-columns: 1fr 1fr auto;
+        top: 0;
+        left: 0;
+
+        .logo {
+            @apply text-transparent text-2xl font-semibold;
+            -webkit-text-stroke: 1px #000;
+        }
+
+        ul {
+            @apply flex gap-8 items-center justify-center;
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    @apply text-cyan-400;
+                }
+            }
+        }
+
+        .signup {
+            @apply mr-4;
+
+            &:hover {
+                @apply text-cyan-400;
+            }
+        }
+    }
+
+    .body {
+        @apply flex flex-col items-start;
+
+        button {
+            @apply bg-teal-500 rounded-md px-4 py-2;
+
+            &:hover {
+                @apply bg-teal-300;
+            }
+        }
+    }
+}
